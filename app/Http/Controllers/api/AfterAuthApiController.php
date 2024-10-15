@@ -81,6 +81,5 @@ class AfterAuthApiController extends Controller
 
     }
 
-
 }
 

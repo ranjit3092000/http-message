@@ -122,8 +122,7 @@ class BeforeAuthApiController extends Controller
   
         return $this->respondWithToken($token);
     }
-
-
+    
     protected function respondWithToken($token)
     {
         return response()->json([
@@ -135,3 +134,4 @@ class BeforeAuthApiController extends Controller
     }
     
 }
+

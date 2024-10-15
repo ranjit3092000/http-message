@@ -16,7 +16,6 @@ Route::group(['prefix' => 'beforeauth', 'as' => 'api.', 'namespace' => 'api'], f
 
 });
 
-
     
 Route::group(['prefix' => 'afterauth', 'as' => 'afterauth','middleware' => ['jwt.auth']], function () {
 
