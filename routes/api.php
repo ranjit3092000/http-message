@@ -24,6 +24,7 @@ Route::group(['prefix' => 'afterauth', 'as' => 'afterauth','middleware' => ['jwt
     Route::post('/Refresh', [AfterAuthApiController::class, 'Refresh'])->name('Refresh');
     Route::post('/Support', [AfterAuthApiController::class, 'Support'])->name('Support');
 
+    
 });
 
 
