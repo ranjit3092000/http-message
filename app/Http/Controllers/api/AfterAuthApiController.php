@@ -36,7 +36,7 @@ class AfterAuthApiController extends Controller
             // Return JSON response for other token errors
             return response()->json(['error' => 'Token is missing or unauthorized'], 401);
         }
-    }   
+    }
 
     public function Logout()
     {
