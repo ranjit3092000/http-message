@@ -14,8 +14,19 @@ function userObject($user){
         $data->email = $appuser->email;
         $appuser_device = Appuserdevice::where('appuser_id', $user)->first();
         // dd($appuser_device);
-        $data->user_device = isset($appuser_device) ? (object) $appuser_device : new \Stdclass();
+        if ($appuser_device) {
+            // Convert the model to an array and unset the jwt_token field
+            $appuser_device_array = $appuser_device->toArray();
+            unset($appuser_device_array['jwt_token']);
+            
+            // Convert back to an object
+            $data->user_device = (object) $appuser_device_array;
+        } else {
+            // Set to empty object if no device is found
+            $data->user_device = new \StdClass();
+        }
     }
 
     return $data;
 }
+
