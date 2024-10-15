@@ -132,8 +132,6 @@ class BeforeAuthApiController extends Controller
             'status' => 1
         ]);
     }
-    
-
-    
+        
 }
 
