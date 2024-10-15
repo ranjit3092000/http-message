@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\api\AfterauthApiController;
-use App\Http\Controllers\api\BeforeauthApiController;
+use App\Http\Controllers\api\AfterAuthApiController;
+use App\Http\Controllers\api\BeforeAuthApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'beforeauth', 'as' => 'api.', 'namespace' => 'api'], function () {
     
-    Route::post('/Register', [BeforeauthApiController::class, 'Register'])->name('Register');
-    Route::post('/Login', [BeforeauthApiController::class, 'Login'])->name('Login');
+    Route::post('/Register', [BeforeAuthApiController::class, 'Register'])->name('Register');
+    Route::post('/Login', [BeforeAuthApiController::class, 'Login'])->name('Login');
 
 });
 
